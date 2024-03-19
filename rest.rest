@@ -1,1 +1,11 @@
 GET http://localhost:3000/api/user/test 
+###
+
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "username":"bina1",
+    "email":"bina1@examplee.com",
+    "password":"12345"
+}
