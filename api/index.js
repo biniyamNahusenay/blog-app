@@ -23,3 +23,13 @@ try{
 app.listen(3000,()=>{
     console.log('server is running on port 3000!!')
 })
+
+app.use((err, req, res, next) =>{
+  const statuscode = err.statuscode || 500
+  const message = err.message || 'internal server error'
+  res.status(statuscode).json({
+    success:false,
+    statuscode,
+    message
+  })
+})
