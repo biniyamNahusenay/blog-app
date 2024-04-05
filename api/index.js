@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import userRoutes from "./routes/userRoutes.js"
 import authRoutes from "./routes/authRoutes.js"
+import postRoutes from "./routes/postRoute.js"
 import cookieParser from 'cookie-parser'
 
 dotenv.config();
@@ -13,6 +14,7 @@ app.use(cookieParser())
 
 app.use("/api/user",userRoutes)
 app.use("/api/auth",authRoutes)
+app.use("/api/post",postRoutes)
 
 try{
     mongoose.connect(process.env.mongo_url)
