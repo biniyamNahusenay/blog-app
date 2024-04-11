@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 export default function DashPost() {
 const {currentUser} = useSelector((state)=>state.user)
 const [userPosts,setUserPosts] = useState([])
-const [showMore, setShowMore] = useState(true);
+const [showMoree, setShowMoree] = useState(true);
 
 useEffect(() => {
   const fetchPosts = async () => {
@@ -36,7 +36,7 @@ const handleShowMore = async () => {
     if (res.ok) {
       setUserPosts((prev) => [...prev, ...data.posts]);
       if (data.posts.length < 9) {
-        setShowMore(false);
+        setShowMoree(false);
       }
     }
   } catch (error) {
@@ -103,7 +103,7 @@ const handleShowMore = async () => {
               </Table.Body>
             ))}
            </Table>
-           {showMore && (
+           {showMoree && (
             <button
               onClick={handleShowMore}
               className='w-full text-teal-500 self-center text-sm py-7'
