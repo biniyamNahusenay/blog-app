@@ -52,7 +52,7 @@ export default function DashUsers() {
             method: 'DELETE',
         });
         const data = await res.json();
-        console.log(data)
+        
         if (res.ok) {
             setUsers((prev) => prev.filter((user) => user._id !== userIdToDelete));
             setShowModal(false);
