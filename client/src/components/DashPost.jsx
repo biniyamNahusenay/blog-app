@@ -70,7 +70,7 @@ const handleDeletePost = async ()=>{
 }
 
   return (
-    <div style={{marginLeft:"-25px"}} className='table-auto overflow-x-scroll md:mx-auto p-3 scrollbar scrollbar-track-slate-100 scrollbar-thumb-slate-300 dark:scrollbar-track-slate-700 dark:scrollbar-thumb-slate-500'>
+    <div style={{marginLeft:"-235px"}} className='table-auto overflow-x-scroll md:mx-auto p-3 scrollbar scrollbar-track-slate-100 scrollbar-thumb-slate-300 dark:scrollbar-track-slate-700 dark:scrollbar-thumb-slate-500'>
       {
         currentUser.isAdmin && userPosts.length > 0 ? (
           <>
