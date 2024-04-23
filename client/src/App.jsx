@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Signin from "./pages/Signin"
 import Signup from "./pages/Signup"
+import Search from "./pages/Search"
 import Projects from "./pages/Projects"
 import Dashboard from "./pages/Dashboard"
 import CreatePost from "./pages/CreatePost"
@@ -24,6 +25,7 @@ export default function App() {
          <Route path="/about" element={<About/>}/>
          <Route path="/signup" element={<Signup/>}/>
          <Route path="/signin" element={<Signin/>}/>
+         <Route path="/search" element={<Search/>}/>
          <Route path="/projects" element={<Projects/>}/>
          <Route path='/post/:postSlug' element={<PostPage />} />
          <Route element={<PrivateRoute/>}>
